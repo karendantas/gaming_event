@@ -23,18 +23,24 @@
 }
 
 main{
+    max-width: 100rem;
+    width: 100%;
     height: 100vh;
-    padding : 0 4.5rem;
+
+    padding: 0 2rem;
+    margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
 }
 
 .infos{ 
     width: 40rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     font-weight: 500;
     color: var(--brown-700);
 }
@@ -45,7 +51,6 @@ main{
 }
 .infos h1>span { color: var(--indigo-700)}
 .infos-content{
-    width: 100%;
     display: flex;
     gap: 1rem;
 }
@@ -61,8 +66,10 @@ main{
     color: var(--indigo-700)
 }
 .infos > p{
-    margin-top: 2rem;
+    margin: 2rem 2rem 2rem 0;
     font-size: 1.5rem;
+    width: 80%;
+    text-align: justify;
   
 }
 
@@ -144,4 +151,44 @@ main{
 }
 .form-button > button:hover{
     background-color: #797bff;
+}
+
+
+@media (max-width: 1200px){
+    html{
+        font-size: 90%;
+    }
+}
+@media(max-width: 950px){
+    main{
+        height: 100%;
+        padding: 2rem 0;
+        flex-direction: column;
+    }
+
+    .infos, .infos-content{
+        align-items: center;
+    }
+    .infos > p { text-align: center;}
+}
+@media(max-width: 550px){
+    html{
+        font-size: 70%;
+    }
+    .infos{
+        width: 90%;
+    }
+    .form{
+        width: 90%;
+    }
+    .infos h1{
+        font-size: 5rem;
+    }
+}
+@media(max-width:450px){
+    .infos-content{ flex-direction: column;}
+    .infos p { 
+        width: 90%; 
+        margin: 1rem 0 1rem 0;
+        }
 }
