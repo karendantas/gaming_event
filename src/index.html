@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./styles.css"/>
     <title>Ezports</title>
@@ -13,27 +14,54 @@
 <body>
     <main>
         <div class="infos">
-            <div class="infos-content"></div>
+            <h1>E<span>Z</span>PORTS</h1>
+            <div class="infos-content">
+                <div class = "infos-group"> 
+                    <i class="ph ph-map-pin"></i>
+                    <p>Pau dos Ferros, RN</p>
+                </div>
+                <div> 
+                    <i class="ph ph-calendar"></i>
+                    <p>08/05/2025</p>
+                </div>
+            </div>
+
+            <p>Acesse o formulário e garanta uma vaga no maior concurso de jogos do Brasil e concorra a prêmios incríveis!</p>
         </div>
 
           <div class="form">
             <div class="form-content">
-                <form >
+                <form id = "form">
                     <h2>FORMULÁRIO</h2>
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Login">
-                    <input type="text" placeholder="Senha">
-                    <select name="games" id="">
-                        <option value="" selected disabled>Selecione um jogo *</option>
-                        <option value = "league"> League of Legends </option>
-                        <option value = "valorant"> Valorant </option>
-                        <option value = "dota2"> Dota 2 </option>
-                        <option value = "csgo"> CsGo </option>
-                    </select>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome">
+                        <span>Error</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome">
+                        <span>Error</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome">
+                        <span>Error</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome">
+                        <span>Error</span>
+                    </div>
+                    <div class="form-group">
+                        <select name="games" id="">
+                            <option value="" selected disabled>Selecione um jogo *</option>
+                            <option value = "league"> League of Legends </option>
+                            <option value = "valorant"> Valorant </option>
+                            <option value = "dota2"> Dota 2 </option>
+                            <option value = "csgo"> CsGo </option>
+                        </select>
+                        <span>Error</span>
+                    </div>
                     
                     <div class="form-button">
-                        <button>Enviar</button>
+                        <button id="button">Enviar</button>
                     </div>
                 </form>
             </div>

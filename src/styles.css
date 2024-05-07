@@ -8,7 +8,10 @@
     --pink-400: #f472b6;
     --yellow-300: #fcd34d;
     --indigo-500: #6366f1;
+    --indigo-700: #4338ca;
+    --red-400: #ef4444;
     --brown-500: #422006;
+    --brown-700: #292524;
 
     background-color: var(--pink-400);
 }
@@ -21,16 +24,48 @@
 
 main{
     height: 100vh;
-    padding: 2.5rem;
+    padding : 0 4.5rem;
 
     display: flex;
-    justify-content: center;
-    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.infos{
-    width: 20rem;
+.infos{ 
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: var(--brown-700);
 }
+
+.infos h1{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.infos h1>span { color: var(--indigo-700)}
+.infos-content{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+.infos-content div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.infos-content div p{ font-size: 1.5rem; }
+.infos-content div i {
+    font-size: 2rem;
+    color: var(--indigo-700)
+}
+.infos > p{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  
+}
+
 .form{
     width:  37.5rem ; /* 600px */
     height: 50rem ; /* 800px */
@@ -39,6 +74,7 @@ main{
     border: 5px solid var(--brown-500);
 
     border-radius: 10px;
+    border-bottom-right-radius:60px ;
 
     display: flex;
     justify-content: center;
@@ -46,11 +82,12 @@ main{
 }
 
 .form-content {
-    height: 75%;
-    width: 90%;
+    height: calc(75% + 7.5px);
+    width: calc(90% + 7.5px);
 
     margin-top: 2rem;
-    border-radius: 10px;
+    border: 15px solid #292524;
+    border-radius: 5px;
     background-color: var(--white-100);
 }
 
@@ -65,15 +102,30 @@ main{
     gap: 2.5rem;
 }
 
-.form-content form input, .form-content form select{
+.form-content form h2{ color: var(--indigo-700)}
+
+.form-group{
     width: 90%;
-    height: 3rem;
+    height: 3.5rem;
+}
+
+.form-group input, .form-group select{
+    width: 100%;
+    height: 90%;
     padding-left: 20px;
 
     border: none;
     border-radius: 5px;
     background-color: var(--gray-100);
+    outline-color: var(--indigo-500);
 }
+.form-group span{
+    margin-left: 10px;
+    font-size: 0.875rem;
+    color: var(--red-400);
+    display: none;
+}
+
 
 .form-button {
  position: absolute;
@@ -88,5 +140,8 @@ main{
 
     background-color: var(--indigo-500);
     font-size: 1.25rem;
+    transition: 0.5s;
 }
-
+.form-button > button:hover{
+    background-color: #797bff;
+}
