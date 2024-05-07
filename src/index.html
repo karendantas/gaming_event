@@ -34,30 +34,29 @@
                 <form id = "form">
                     <h2>FORMULÁRIO</h2>
                     <div class="form-group">
-                        <input type="text" placeholder="Nome" required>
-                        <span>Error</span>
+                        <input id = "name" type="text" placeholder="Nome" required>
+                        <span class = "error-message">precisa ter mais de 3 letras</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Nome" required>
-                        <span>Error</span>
+                        <input id="login" type="text" placeholder="Login" required>
+                        <span class = "error-message">precisa ter mais de 3 letras</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Nome" required>
-                        <span>Error</span>
+                        <input id="email" type="email" placeholder="Email" required>
+                        <span class = "error-message">Error</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Nome" required>
-                        <span>Error</span>
+                        <input id="password" type="password" placeholder="Senha" required>
+                        <span class = "error-message">Error</span>
                     </div>
                     <div class="form-group">
-                        <select name="games" id="" required>
+                        <select name="games" id="games" required>
                             <option value="" selected disabled>Selecione um jogo *</option>
                             <option value = "league"> League of Legends </option>
                             <option value = "valorant"> Valorant </option>
                             <option value = "dota2"> Dota 2 </option>
                             <option value = "csgo"> CsGo </option>
                         </select>
-                        <span>Error</span>
                     </div>
                     
                     <div class="form-button">
