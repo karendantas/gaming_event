@@ -1,6 +1,8 @@
 const button = document.getElementById('button')
 const form =document.getElementById('form');
+const storageKey = "userdata"
 
+const modal = document.getElementById('modal');
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
 
@@ -11,17 +13,31 @@ form.addEventListener('submit', (e)=>{
 
     console.log(isEmailValid);
    if( isNameValid && isLoginValid && isEmailValid && isPasswordValid){
-        forms.submit()
-        alert('Formulário enviado!')
+        const data = {
+            name: nameInput.value,
+            game: gamesInput.value
+        }
+        localStorage.setItem(storageKey, JSON.stringify(data));
+        showModal();
+       
    }
 })
 
+function showModal(){
+    const data = JSON.parse( localStorage.getItem(storageKey));
+    const {name, game} = data;
 
-button.addEventListener('click', 
-    ()=> {
-        button.style= 'transform:translateY(5px)';
-    }
-)
+    const span = document.querySelector('#modal span')
+    span.innerHTML  = `Parabéns, ${name}`
+    const p = document.querySelector('#modal p')
+    p.innerHTML = `Você agora será selecionado para um time de ${game}`;
+    
+    const modalButton = document.querySelector('#modal button')
+    modalButton.addEventListener('click', () => { form.submit() })
+    modal.classList.remove("hidden");
+    modal.classList.add("show");
+}
+
 const spans = document.getElementsByClassName("error-message");
 
 const nameInput = document.getElementById('name');

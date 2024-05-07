@@ -13,6 +13,11 @@
 </head>
 <body>
     <main>
+        <div id="modal" class = "hidden">
+            <span></span>
+            <p></p>
+            <button>ok</button>
+        </div>
         <div class="infos">
             <h1>E<span>Z</span>PORTS</h1>
             <div class="infos-content">
@@ -43,19 +48,19 @@
                     </div>
                     <div class="form-group">
                         <input id="email" type="email" placeholder="Email" required>
-                        <span class = "error-message">Error</span>
+                        <span class = "error-message">email inválido</span>
                     </div>
                     <div class="form-group">
                         <input id="password" type="password" placeholder="Senha" required>
-                        <span class = "error-message">Error</span>
+                        <span class = "error-message">precisa ter mais de 6 letras</span>
                     </div>
                     <div class="form-group">
                         <select name="games" id="games" required>
                             <option value="" selected disabled>Selecione um jogo *</option>
-                            <option value = "league"> League of Legends </option>
-                            <option value = "valorant"> Valorant </option>
-                            <option value = "dota2"> Dota 2 </option>
-                            <option value = "csgo"> CsGo </option>
+                            <option value = "League of legends"> League of Legends </option>
+                            <option value = "Valorant"> Valorant </option>
+                            <option value = "Dota 2"> Dota 2 </option>
+                            <option value = "CsGo"> CsGo </option>
                         </select>
                     </div>
                     
