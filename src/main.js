@@ -33,9 +33,9 @@ function showModal(){
     p.innerHTML = `Você agora será selecionado para um time de ${game}`;
     
     const modalButton = document.querySelector('#modal button')
-    modalButton.addEventListener('click', () => { form.submit() })
     modal.classList.remove("hidden");
     modal.classList.add("show");
+    modalButton.addEventListener('click', () => { form.submit() })
 }
 
 const spans = document.getElementsByClassName("error-message");
