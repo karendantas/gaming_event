@@ -4,9 +4,13 @@
     line-height: 1.6;
 
     --white-100: #f9fafb;
+    --gray-100: #e9e7e7;
     --pink-400: #f472b6;
     --yellow-300: #fcd34d;
     --indigo-500: #6366f1;
+    --brown-500: #422006;
+
+    background-color: var(--pink-400);
 }
 
 * {
@@ -16,6 +20,73 @@
 }
 
 main{
-    min-height: 100vh;
-    background-color: var(--pink-400) ;
+    height: 100vh;
+    padding: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
 }
+
+.infos{
+    width: 20rem;
+}
+.form{
+    width:  37.5rem ; /* 600px */
+    height: 50rem ; /* 800px */
+
+    background-color: var(--yellow-300);
+    border: 5px solid var(--brown-500);
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.form-content {
+    height: 75%;
+    width: 90%;
+
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: var(--white-100);
+}
+
+.form-content form{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.form-content form input, .form-content form select{
+    width: 90%;
+    height: 3rem;
+    padding-left: 20px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: var(--gray-100);
+}
+
+.form-button {
+ position: absolute;
+ bottom: 3.5rem;
+}
+
+.form-button > button{
+    border: 4px solid var(--brown-500);
+    width: 15rem;
+    height: 4rem;
+    border-radius: 5px;
+
+    background-color: var(--indigo-500);
+    font-size: 1.25rem;
+}
+
