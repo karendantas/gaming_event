@@ -1,8 +1,9 @@
-const button = document.getElementById('button')
+
 const form =document.getElementById('form');
+const modal = document.getElementById('modal');
+
 const storageKey = "userdata"
 
-const modal = document.getElementById('modal');
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
 
@@ -23,28 +24,46 @@ form.addEventListener('submit', (e)=>{
    }
 })
 
-function showModal(){
-    const data = JSON.parse( localStorage.getItem(storageKey));
-    const {name, game} = data;
+/*
+    Mostra um modal com informações do localStorage, inserindo os
+    dados dinamicos dentro do modal e aplicando um evento 'click' no 
+    botão para fechar o modal e recarregar a pagina.
 
-    const span = document.querySelector('#modal span')
-    span.innerHTML  = `Parabéns, ${name}`
-    const p = document.querySelector('#modal p')
-    p.innerHTML = `Você agora será selecionado para um time de ${game}`;
-    
-    const modalButton = document.querySelector('#modal button')
-    modal.classList.remove("hidden");
-    modal.classList.add("show");
-    modalButton.addEventListener('click', () => { form.submit() })
+*/
+function showModal(){
+    try{
+
+        const data = JSON.parse( localStorage.getItem(storageKey));
+        
+        if (data) {
+            const {name, game} = data;
+            const span = document.querySelector('#modal span')
+            span.innerHTML  = `Parabéns, ${name}`
+        
+            const p = document.querySelector('#modal p')
+            p.innerHTML = `Você agora será selecionado para um time de ${game}`;
+            
+            modal.classList.remove("hidden");
+            modal.classList.add("show");
+            
+            const modalButton = document.querySelector('#modal button')
+            modalButton.addEventListener('click', () => { form.submit() })
+        }
+
+    }catch(error){
+        console.log("Erro ao acessar local Storage", error)
+    }
 }
+
+//forms-validation
 
 const spans = document.getElementsByClassName("error-message");
 
 const nameInput = document.getElementById('name');
 const loginInput = document.getElementById('login');
 const emailInput = document.getElementById('email')
-const passwordInput = document.getElementById('password');
 const gamesInput = document.getElementById('games');
+const passwordInput = document.getElementById('password');
 
 function validateName(name){
     return (name.value.length< 3) ? setErrorSpan(0) : removeErrorSpan(0);
