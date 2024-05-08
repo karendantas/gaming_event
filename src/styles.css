@@ -4,14 +4,13 @@
 
     --white-100: #f9fafb;
     --gray-100: #e9e7e7;
-    --pink-400: #f472b6;
-    --yellow-300: #fcd34d;
-    --indigo-500: #6366f1;
-    --indigo-700: #4338ca;
+    --purple-400: #976aff;
+    --purple-500: #8358e7;
     --red-400: #ef4444;
+    --yellow-500: #ffef5e;
     --brown-700: #292524;
 
-    background-color: var(--yellow-300);
+    background-color: var(--purple-400);
 }
 * {
     padding: 0;
@@ -49,7 +48,7 @@ main{
 .hidden{display: none;}
 .show{display: block}
 #modal > button{
-    background-color: var(--indigo-700);
+    background-color:  var(--yellow-500);
     border: 2px solid var(--brown-700);
     border-radius: 5px;
     color: var(--white-100);
@@ -70,7 +69,7 @@ main{
     font-size: 7rem;
     font-weight: 900;
 }
-.infos h1>span { color: var(--indigo-700)}
+.infos h1>span { color:  var(--yellow-500);}
 .infos-content{
     display: flex;
     gap: 1rem;
@@ -84,7 +83,7 @@ main{
 .infos-content div p{ font-size: 1.5rem; }
 .infos-content div i {
     font-size: 2rem;
-    color: var(--indigo-700)
+    color: var(--yellow-500)
 }
 .infos > p{
     margin: 2rem 2rem 2rem 0;
@@ -97,7 +96,7 @@ main{
     width:  37.5rem ; /* 600px */
     height: 50rem ; /* 800px */
 
-    background-color: var(--pink-400);
+    background-color: var(--yellow-500);
     border: 5px solid var(--brown-700);
 
     border-radius: 10px;
@@ -129,7 +128,7 @@ form > h2{ font-size: 2.5rem;}
     gap: 2.5rem;
 }
 
-.form-content form h2{ color: var(--indigo-700)}
+.form-content form h2{ color: var(--purple-400)}
 
 .form-group{
     width: 90%;
@@ -144,7 +143,7 @@ form > h2{ font-size: 2.5rem;}
     border: none;
     border-radius: 5px;
     background-color: var(--gray-100);
-    outline-color: var(--indigo-500);
+    outline-color:  var(--purple-400);
 }
 
 ::placeholder{
@@ -168,13 +167,13 @@ form > h2{ font-size: 2.5rem;}
     height: 4rem;
     border-radius: 5px;
 
-    background-color: var(--indigo-700);
+    background-color:  var(--purple-400);
     font-size: 1.25rem;
     color: var(--white-100);
 
 }
 .form-button > button:hover{
-    background-color: var(--indigo-500);
+    background-color:  var(--purple-500);
 }
 
 @media (max-width: 1200px){
